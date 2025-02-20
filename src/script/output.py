@@ -8,12 +8,14 @@ def print_lotto_numbers(lotto_numbers):
 
 
 def print_reward(rewards):
+    print("rewardsrewards", rewards)
     print("당첨 통계")
     print("---------")
-    print("3개 일치 (5000원)- ", rewards[0], "개")
-    print("4개 일치 (50000원)- ", rewards[1], "개")
-    print("5개 일치 (1500000원)- ", rewards[2], "개")
-    print("6개 일치 (2000000000원)- ", rewards[3], "개")
+    print("3개 일치 (5000원)- ", rewards[3], "개")
+    print("4개 일치 (50000원)- ", rewards[4], "개")
+    print("5개 일치 (1500000원)- ", rewards[5], "개")
+    print("5개 일치, 보너스 볼 일치(30000000원)- ", rewards[7], "개")
+    print("6개 일치 (2000000000원)- ", rewards[6], "개")
 
 
 def print_rate(rate):

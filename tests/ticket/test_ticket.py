@@ -31,5 +31,24 @@ class TestTicket(unittest.TestCase):
         self.assertEqual(reward_counts[6], 2)
         self.assertEqual(reward_counts[2], 1)
 
+    def test_get_reward_ticket_with_bonus(self):
+        last_week_winners = [
+            [1,2,3,4,5,6],
+            [7,8,9,10,11,12]
+        ]
+        lotto_numbers = [
+            [1,2,3,4,5,6],
+            [7,8,9,10,11,12],
+            [1,2,7,8,13,14]
+        ]
+        reward_counts = get_reward_ticket(lambda: 7, last_week_winners, lotto_numbers)
+        expected = {
+            7:1,
+            2:1
+        }
+        self.assertEqual(reward_counts[7],1)
+        self.assertEqual(reward_counts[2],1)
+        self.assertEqual({7:1,2:1},expected)
+        
 if __name__ == '__main__':
     unittest.main()
