@@ -8,10 +8,6 @@ class Reward(Enum):
     MATCH_6 = 2000000000
     MATCH_BONUS = 30000000
 
-
-# class MATCH(Enum): #이름 마음에 안들음
-#     3 = "MATCH_3"
-
 class MatchCount(Enum):
     THREE = (3,Reward.MATCH_3)
     FOUR = (4,Reward.MATCH_4)
