@@ -30,7 +30,7 @@ class TestSimulation(unittest.TestCase):
         output.print_buy_ticket(count_ticket)
         mock_print_buy_ticket.assert_called_once_with(count_ticket)
 
-        # stpe4: 사용자 입력 - 지난 주 당첨 번호, 보너스 번호
+        # stpe3: 사용자 입력 - 지난 주 당첨 번호, 보너스 번호
         last_week_winner_numbers = print_input_last_week_winner_number()
         self.assertEqual(last_week_winner_numbers, [1, 2, 3, 4, 5, 7])
 
@@ -40,7 +40,6 @@ class TestSimulation(unittest.TestCase):
         # Step 4: 티켓 생성 (보너스 번호 포함)
         lotto_numbers = [mock_generate_random_numbers.return_value for _ in
                          range(count_ticket)]
-        # lotto_numbers = [generate_tickets(count_ticket).return_value for _ in range(count_ticket)]
         self.assertEqual(lotto_numbers[0], [1, 2, 3, 4, 5, 7])
 
         # step5: 보상 계산
