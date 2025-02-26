@@ -1,6 +1,7 @@
 BONUS_BALL = 1
 NOT_BONUS_BALL = 0
 
+
 def count_matching_numbers(last_week_winner_numbers, lotto_numbers,
                            bonus_number):
     match_count = len(set(last_week_winner_numbers) & set(lotto_numbers))

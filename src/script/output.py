@@ -1,14 +1,16 @@
-def print_buy_ticket(count_ticket):
-    print(f"{count_ticket}개를 구매했습니다.")
+def print_buy_ticket(manual_ticket_count, auto_ticket_count):
+    print(f"수동으로 {manual_ticket_count}장, 자동으로 {auto_ticket_count}장을 구매했습니다.")
 
 
-def print_lotto_numbers(lotto_numbers):
+def print_lotto_numbers(lotto_numbers, manual_lotto_numbers):
+    for manual_lotto_number in manual_lotto_numbers:
+        print(manual_lotto_number)
+
     for lotto_number in lotto_numbers:
         print(lotto_number)
 
 
 def print_reward(rewards):
-    print("rewardsrewards", rewards)
     print("당첨 통계")
     print("---------")
     print("3개 일치 (5000원)- ", rewards[3], "개")

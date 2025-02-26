@@ -8,14 +8,15 @@ class Reward(Enum):
     MATCH_6 = 2000000000
     MATCH_BONUS = 30000000
 
-class MatchCount(Enum):
-    THREE = (3,Reward.MATCH_3)
-    FOUR = (4,Reward.MATCH_4)
-    FIVE = (5,Reward.MATCH_5)
-    SIX = (6,Reward.MATCH_6)
-    BONUS = (7,Reward.MATCH_BONUS)
 
-    def __init__(self,count,reward):
+class MatchCount(Enum):
+    THREE = (3, Reward.MATCH_3)
+    FOUR = (4, Reward.MATCH_4)
+    FIVE = (5, Reward.MATCH_5)
+    SIX = (6, Reward.MATCH_6)
+    BONUS = (7, Reward.MATCH_BONUS)
+
+    def __init__(self, count, reward):
         self.count = count
         self.reward = reward
 

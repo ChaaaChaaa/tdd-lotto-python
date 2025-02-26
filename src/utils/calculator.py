@@ -1,4 +1,13 @@
 from src.lotto.rewards import MatchCount
+from src.utils.validation import Validation
+
+
+def calculate_auto_ticket_count(count_ticket, manual_ticket_count):
+    _count_ticket = int(count_ticket)
+    _manual_ticket_count = int(manual_ticket_count)
+    if not Validation.validate_max_buy_lotto_count(_count_ticket, _manual_ticket_count):
+        return 0
+    return abs(_count_ticket - _manual_ticket_count)
 
 
 def calculate_prize_money(counts):

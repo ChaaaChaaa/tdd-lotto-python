@@ -1,6 +1,7 @@
 import unittest
 from src.ticket.ticket_shop import buy_ticket
 
+
 class TestTicketShop(unittest.TestCase):
 
     def test_buy_ticket_exact_amount(self):
@@ -17,6 +18,7 @@ class TestTicketShop(unittest.TestCase):
         input_money = 999
         count = buy_ticket(input_money)
         self.assertEqual(count, 0)
+
 
 if __name__ == '__main__':
     unittest.main()
